@@ -635,6 +635,113 @@
         background: linear-gradient(135deg, #e8e3d8, #cfc9be);
       }
 
+      /* ── DESIGN SYSTEMS ── */
+      .design-systems-section {
+        background: var(--cream);
+      }
+
+      .ds-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .ds-card {
+        background: var(--paper);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .ds-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+      }
+
+      .ds-media {
+        width: 100%;
+        height: 220px;
+        background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+        overflow: hidden;
+      }
+      .ds-media video,
+      .ds-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .ds-media-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px dashed rgba(13, 13, 13, 0.15);
+        background: var(--cream);
+        color: var(--muted);
+      }
+      .ds-media-placeholder span {
+        font-family: var(--serif);
+        font-size: 2.2rem;
+        font-style: italic;
+      }
+
+      .ds-body {
+        padding: 1.75rem 2rem 2rem;
+      }
+
+      .ds-card-tag {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--accent);
+        margin-bottom: 0.8rem;
+      }
+      .ds-card-tag.muted {
+        color: var(--muted);
+      }
+
+      .ds-card h4 {
+        font-family: var(--serif);
+        font-size: 1.35rem;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+        margin-bottom: 0.6rem;
+      }
+
+      .ds-card p {
+        font-size: 0.92rem;
+        color: #5a564e;
+        line-height: 1.7;
+        margin-bottom: 1.2rem;
+      }
+
+      .ds-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-family: var(--sans);
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: 1px solid var(--ink);
+        padding-bottom: 2px;
+        transition: color 0.2s, border-color 0.2s;
+      }
+      .ds-link:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+      }
+
       /* ── RECENT WORK GRID ── */
       .highlights-section {
         background: var(--cream);
@@ -1092,6 +1199,9 @@
         .work-grid {
           grid-template-columns: 1fr;
         }
+        .ds-grid {
+          grid-template-columns: 1fr;
+        }
         footer {
           flex-direction: column;
           gap: 1rem;
@@ -1267,34 +1377,17 @@
         <h2 class="section-title fade-up visible">Case <em>Studies</em></h2>
 
         <div class="case-list">
-          <!-- Case Study 1 -->
+          <!-- Case Study 1: placeholder (SARA content coming soon) -->
           <div class="case-item fade-up visible">
             <div class="case-content">
-              <span class="case-tag">AI · E-Commerce</span>
-              <h3 class="case-title">Lyra — AI Shopping Companion</h3>
+              <span class="case-tag">Coming Soon</span>
+              <h3 class="case-title">New Case Study — In Progress</h3>
               <p class="case-desc">
-                Designed an AI-powered personalized shopping platform that matches users with
-                products based on their style, browsing history, and regional trends. Features
-                include a conversational shopping assistant, visual search powered by Lyra Vision,
-                and real-time trend scoring — delivering vibe-matched recommendations with
-                budget-filtered precision.
+                This case study is being updated. Check back soon.
               </p>
-              <div class="case-metrics">
-                <div>
-                  <div class="metric-val">94%</div>
-                  <div class="metric-lbl">Match Accuracy</div>
-                </div>
-                <div>
-                  <div class="metric-val">2M+</div>
-                  <div class="metric-lbl">Product Listings</div>
-                </div>
-              </div>
             </div>
             <div class="case-visual">
-              <img
-                src="images/lyra.jpeg"
-                alt="Lyra AI Shopping Companion"
-              />
+              <div class="case-visual-emoji">✨</div>
             </div>
           </div>
 
@@ -1386,6 +1479,56 @@
                 src="images/milostudio-bulk.jpeg"
                 alt="Milo Studio Bulk Content Operations"
               />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── DESIGN SYSTEMS ── -->
+    <section class="design-systems-section" id="design-systems">
+      <div class="container">
+        <div class="section-label">Design Systems</div>
+        <h2 class="section-title fade-up visible">Systems I've <em>Shaped</em></h2>
+        <div class="ds-grid">
+          <!-- Adobe Spectrum & Spectrum 2 -->
+          <div class="ds-card fade-up delay-1 visible">
+            <div class="ds-media">
+              <video
+                src="videos/spectrum-2-overview.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+            </div>
+            <div class="ds-body">
+              <span class="ds-card-tag">Adobe</span>
+              <h4>Adobe Spectrum &amp; Spectrum 2</h4>
+              <p>
+                Contributed to Adobe's design system — from foundational Spectrum components to
+                the newer Spectrum 2 system powering Adobe's product suite, focused on
+                consistency, accessibility, and scale across teams.
+              </p>
+              <a
+                class="ds-link"
+                href="https://s2.spectrum.adobe.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Spectrum 2 →</a
+              >
+            </div>
+          </div>
+
+          <!-- Placeholder for personal design system -->
+          <div class="ds-card fade-up delay-2 visible">
+            <div class="ds-media">
+              <div class="ds-media-placeholder"><span>✦</span></div>
+            </div>
+            <div class="ds-body">
+              <span class="ds-card-tag muted">Coming Soon</span>
+              <h4>My Own Design System</h4>
+              <p>Details coming soon.</p>
             </div>
           </div>
         </div>
@@ -1567,7 +1710,7 @@
         <li>
           <a href="https://www.linkedin.com/in/suman-hemant-317503141" target="_blank">LinkedIn</a>
         </li>
-        <li><a href="https://dribbble.com/Sumannify_UX" target="_blank">Dribbble</a></li>
+        <li><a href="https://dribbble.com/SumanHemant" target="_blank">Dribbble</a></li>
         <li>
           <a href="https://sumanhemant05ify-ux.github.io/UX_Portfolio/UX" target="_blank">Resume</a>
         </li>
